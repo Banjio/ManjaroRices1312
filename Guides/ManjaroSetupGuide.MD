@@ -17,6 +17,14 @@ For starters we use the standard pacman cli tool. The following will select the 
     sudo pacman --fasttrack && sudo pacman -Syyu
     ```
 
+#### X MISC
+
+**Trouble with nvidia graphic card**
+
+* On my older pc i have a nvidia card which is not supported by newer drivers. 
+* To downgrade use `sudo mhwd -a pci nonfree 0300` selecting the correct version for you
+* It may be neccessary to remove the existing driver first `sudo mhwd -r pci`
+
 Pacman can only install from the official arch repository. If you want to install from unoficial sources use either pamac or download directly from AUR and do `makepkg -si`
 
 #### yay 
