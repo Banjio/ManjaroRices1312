@@ -17,23 +17,33 @@ For starters we use the standard pacman cli tool. The following will select the 
     sudo pacman --fasttrack && sudo pacman -Syyu
     ```
 
-#### X MISC
-
-**Trouble with nvidia graphic card**
-
-* On my older pc i have a nvidia card which is not supported by newer drivers. 
-* To downgrade use `sudo mhwd -a pci nonfree 0300` selecting the correct version for you
-* It may be neccessary to remove the existing driver first `sudo mhwd -r pci`
-
 Pacman can only install from the official arch repository. If you want to install from unoficial sources use either pamac or download directly from AUR and do `makepkg -si`
 
 #### yay 
 
 Install packages from AUR using yay `sudo pacman -Sy yay`
 
+#### base-devel
+
+For installing any package from AUR do `sudo pacman -S base-devel`
+
 ### 1.2 Install needed packages
 
-#### Ricing (optional)
+### 1.3 Ricing (optional)
+
+#### 1.1 bspwm
+
+Using the guide provided from lukas we start with this: https://www.christitus.com/bspwm-on-kde/
+
+* Install sxhkd and rofi which are part of the standard dotfiles provided by @Github @Usr:LDAP `sudo pacman -S sxhkd rofi`
+
+##### Deactivating Splash Screen
+
+
+
+
+
+#### XXX
 
 Make your os look nice. We will install the following packages
 
@@ -47,7 +57,7 @@ sudo pacman -S latte-dock konsole
 #### Developing
 
 #### Editors/IDES
-* VSCODE: `pacman -S code`
+* VSCODE:  `pacman -S code` Because i use setting sync we need to use the AUR binary https://aur.archlinux.org/packages/visual-studio-code-bin/
 * Pycharm: `pacman -S pycharm-community-edition` or from snap https://snapcraft.io/install/pycharm-community/arch
 * typora: m
 
@@ -55,6 +65,15 @@ sudo pacman -S latte-dock konsole
 ### 1.3 Standard Settings
 
 * Change do dark desing, change shortcuts (TODO: Find shortcut for swithcing between workspaces)
+
+#### X MISC
+
+**Trouble with nvidia graphic card**
+
+* On my older pc i have a nvidia card which is not supported by newer drivers.
+* To downgrade use `sudo mhwd -a pci nonfree 0300` selecting the correct version for you
+* It may be neccessary to remove the existing driver first `sudo mhwd -r pci`
+
 
 ## 2 Community Edition XFCE with i3
 
