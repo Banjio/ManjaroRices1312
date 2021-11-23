@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + @return
-	Konsole
+	konsole
 
 # program launcher
 super + d
@@ -152,10 +152,10 @@ alt + Tab
 	rofi -show window -kb-accept-entry "!Alt-Tab,!Alt+Alt_L" -kb-row-down "Alt+Tab" -selected-row 1
 
 super + alt + s
-	subl
-
-super + alt + m
-	smerge
+	code
 
 super + alt + b
 	firefox
+
+super + alt + e
+	doublecmd

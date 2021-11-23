@@ -29,18 +29,38 @@ For installing any package from AUR do `sudo pacman -S base-devel`
 
 ### 1.2 Install needed packages
 
+
 ### 1.3 Ricing (optional)
+
+* Select best mirror & Update System: `sudo pacman-mirrors --fasttrack && sudo pacman -Syyu`
+* It may be neccessary to change the nvidia driver afterwards (For some reason this breaks --> see misco  on how to do that)
 
 #### 1.1 bspwm
 
-Using the guide provided from lukas we start with this: https://www.christitus.com/bspwm-on-kde/
-
-* Install sxhkd and rofi which are part of the standard dotfiles provided by @Github @Usr:LDAP `sudo pacman -S sxhkd rofi`
+Using the guide provided from lukas we start with this: https://www.christitus.com/bspwm-on-kde/ and the dotfiles are provided here https://github.com/Banjio/ManjaroRices1312/tree/main/kde-plasma-bspwm
+* Install bswpm: `sudo pacman -S bspwm`
+* Install sxhkd and rofi for hotkeys and druner  `sudo pacman -S sxhkd rofi`
+* Install picom (Optional but needed for kitty and transparency): `sudo pacman -S picom`
+* After adding the config files we need to add an xsession so that we can login into kde-plasma-bspwm:
+  * Add a file to /usr/share/xsessions/ named plasma-bspwm.desktop with the Content
+```
+[Desktop Entry]
+Type=XSession
+Exec=env KDEWM=/usr/bin/bspwm /usr/bin/startplasma-x11
+TryExec=/usr/bin/startplasma-x11
+DesktopNames=KDE
+Name=Plasma bspwm
+```
+* Make Konsole transparent: https://askubuntu.com/questions/189487/how-do-i-configure-background-transparency-for-kdes-terminal
 
 ##### Deactivating Splash Screen
 
 
+#### Getting a compositor
 
+* Needed for bluring, transparency ... effects. Because kwin does both the window management and the compositing you need an own compositor. Picom works just fine. 
+  * Install: `sudo pacman -S picom`
+  * Start with bspwm:  Add to bswpmrc &Rightarrow; exec picom -b
 
 
 #### XXX

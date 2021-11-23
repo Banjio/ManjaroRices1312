@@ -1,5 +1,4 @@
 #! /bin/sh
-
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 python ~/.config/bspwm/setup_monitors.py 10 44
@@ -45,3 +44,5 @@ bspc config initial_polarity     second_child
 # Fix java apps
 wmname LG3D
 export _JAVA_AWT_WM_NONREPARENTING=1
+
+picom --backend glx -b &
