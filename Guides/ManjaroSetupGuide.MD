@@ -25,10 +25,14 @@ Install packages from AUR using yay `sudo pacman -Sy yay`
 
 #### base-devel
 
+
 For installing any package from AUR do `sudo pacman -S base-devel`
 
 ### 1.2 Install needed packages
 
+* Packages i always install: `sudo pacman -S doublecmd-gtk2 vivaldi pycharm-community-edition base-devel yay`
+* Bspwm packages in one go `sudo pacman -S bspwm rofi kitty conky sxhkd picom`
+* All AUR Packages: `yay -a visual-studio-code-bin`
 
 ### 1.3 Ricing (optional)
 
@@ -52,6 +56,24 @@ DesktopNames=KDE
 Name=Plasma bspwm
 ```
 * Make Konsole transparent: https://askubuntu.com/questions/189487/how-do-i-configure-background-transparency-for-kdes-terminal
+
+**Conky**
+
+* Take config from dotfiles -> If it is not workings as extended run conky in Debug Mode `conky -D`
+* Note that it may be neccessary to remove the conky call from bspwmrc
+
+**Rofi**
+
+* Basicially needs no extra config (But you can also configure it to your wishes)
+  * As runer: `rofi -show run -theme sidebar -show-icons`
+  * As Druner: `rofi -show drun -theme sidebar -show-icons`
+  * As windows switcher:`rofi -show window -theme sidebar -show-icons`
+
+**Change Wallpaper**
+
+* Not working on BSWPM with plasma
+* Workaround is to change the wallpaper in an Plasma Session (Or use a manage for example feh)
+
 
 ##### Deactivating Splash Screen
 

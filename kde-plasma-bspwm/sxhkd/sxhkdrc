@@ -76,6 +76,10 @@ super + {o,i}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'
 
+#send focused desktop to next/previous/{dir} monitor
+super + ctrl + shift + {n,p,h,j,k,l}
+	bspc desktop -m {next,prev,west,south,north,east} --follow
+
 #
 # preselect
 #
@@ -151,6 +155,7 @@ super + {t,shift + t,s}
 alt + Tab
 	rofi -show window -kb-accept-entry "!Alt-Tab,!Alt+Alt_L" -kb-row-down "Alt+Tab" -selected-row 1
 
+# Programm Shortcuts
 super + alt + s
 	code
 
