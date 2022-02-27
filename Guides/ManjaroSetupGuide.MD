@@ -31,6 +31,21 @@ Install packages from AUR with
 Another option is to install **AUR** packages with the *base-devel* package directly:
 
     > git clone "addressToRepo" && cd ToGitRepo && makepkg -si
+    
+Another good Package manager is **paru** 
+
+### 1.2.1 General Settings for Pacman
+
+Edit the pacamn Conf 
+
+> sudo nano /etc/pacman.conf 
+
+Add the following lines (if not already in the conf)
+```
+Color
+ParallelDownload=5
+```
+
 
 ## 1.2 Various useful commands 
 
