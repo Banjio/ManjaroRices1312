@@ -169,6 +169,7 @@ fi
 __Editors/IDES__:
 * **VSCODE**: `pacman -S code` Because i use setting sync we need to use the AUR binary https://aur.archlinux.org/packages/visual-studio-code-bin/
 * **Pycharm**: `pacman -S pycharm-community-edition` or from snap https://snapcraft.io/install/pycharm-community/arch
+* **Micro**: An lightweight terminal editor https://micro-editor.github.io/ `pacman -S micro
 
 __Languages__: 
 
