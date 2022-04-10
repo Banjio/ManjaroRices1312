@@ -1,0 +1,49 @@
+#! /bin/sh
+pgrep -x sxhkd > /dev/null || sxhkd &
+
+python ~/.config/bspwm/setup_monitors.py 10 44
+
+if pgrep startplasma-x11 > /dev/null; then
+# Running along plasma
+python ~/.config/bspwm/setup_padding.py 0:44
+
+else
+# Standalone
+python ~/.config/bspwm/setup_padding.py 0:0
+
+fi
+
+bspc config border_width         2
+bspc config window_gap          5
+
+#bspc rule -a Gimp desktop='^8' state=floating follow=on
+#bspc rule -a Chromium desktop='^2'
+#bspc rule -a mplayer2 state=floating
+#bspc rule -a Kupfer.py focus=on
+#bspc rule -a Screenkey manage=off
+
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+bspc config merge_overlapping_monitors true
+bspc config focus_follows_pointer true
+
+#bspc rule -a Slack state=floating
+#bspc rule -a Signal state=floating
+#bspc rule -a mpv state=floating
+#bspc rule -a plexmediaplayer state=floating
+#bspc rule -a Sublime_merge state=floating
+#bspc rule -a Smerge state=floating
+#bspc rule -a "TeamSpeak 3" state=floating
+
+bspc config split_ratio          0.55
+bspc config automatic_scheme     alternate #longest_side # alternate
+bspc config initial_polarity     second_child
+
+# Fix java apps
+wmname LG3D
+export _JAVA_AWT_WM_NONREPARENTING=1
+
+picom --backend glx -b &
+conky -d  &
