@@ -151,6 +151,10 @@ Because of HDMI add the following to .xinitrc `xrandr --output HDMI2 --auto --ri
 
 # 99. Common patterns
 
+## Increase Font Size 
+
+Especially for small monitors the standard is way to small, edit `~/.Xressources` &Rightarrow; `Xft.dpi: 110` as described here for i3-wm https://unix.stackexchange.com/questions/267885/how-do-i-scale-i3-window-manager-for-my-hidpi-display
+
 ## Install all preferred packages at once
 
 	> sudo paru -S --needed visual-studio-code-bin spotify vivaldi vivaldi-ffmpeg-codecs firefox pycharm-community-edition chromium htop terminator micro
