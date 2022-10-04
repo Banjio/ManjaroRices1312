@@ -112,6 +112,12 @@ I prefer chromium based browser because of the working netflix 1080
 
 ### File Management
 
+
+### Cli Tools
+
+* Tmux: For remote sessions (ssh)
+* fzf: For fuzzy autocompletion and reverse searching. Note for bash you have to source it in your `.bashrc` https://wiki.archlinux.org/title/fzf
+
 # 2. Known Problems
 
 ## Bluemann
